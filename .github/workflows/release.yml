@@ -150,6 +150,7 @@ jobs:
           pip3 install Flask
           cd bench
           python3 server.py >server.log 2>&1 &
+          sleep 2
           netstat -an | grep 8000
       - name: Run Bench Suite
         run: |
