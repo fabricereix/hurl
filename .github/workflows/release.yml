@@ -147,9 +147,9 @@ jobs:
           ci/release.sh
       - name: Test Prequisites
         run: |
-            pip3 install Flask
-            cd bench
-            python3 server.py >server.log 2>&1 &
+          pip3 install Flask
+          cd bench
+          python3 server.py >server.log 2>&1 &
       - name: Run Bench Suite
         run: |
           export PATH="$PWD/target/release:$PATH"
