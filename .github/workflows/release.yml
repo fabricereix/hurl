@@ -155,7 +155,7 @@ jobs:
           export PATH="$PWD/target/release:$PATH"
           cd bench
           ./run.sh
-      - name: Archive production artifacts
+      - name: Archive artifacts
         uses: actions/upload-artifact@v2
         if: ${{ always() }}
         with:
